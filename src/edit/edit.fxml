@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.SpinnerValueFactory?>
+<?import javafx.scene.control.Spinner?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="114.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="10.0" prefWidth="286.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="97.0" style="-fx-font-size: 14;" text="Product Name">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER" style="-fx-font-size: 14;" text="Quantity" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER" style="-fx-font-size: 14;" text="Latest Price" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="nameId" maxWidth="150.0" GridPane.columnIndex="1" />
+            <TextField fx:id="quantityId" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <!--<TextField fx:id="priceId" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />-->
+             <Spinner fx:id="spinner" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2"  >
+                 <valueFactory>
+             <javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory fx:id="spinnerFactory">
+                 <min>0</min>
+                 <max>100</max>
+                 <wrapAround>true</wrapAround>
+             </javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory>>
+                 </valueFactory>
+            </Spinner>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="100.0" prefWidth="402.0">
+               <top>
+                  <Button fx:id="okBtn" minWidth="61.0" mnemonicParsing="false" text="Ok" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <Button mnemonicParsing="false" text="Cancel" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
