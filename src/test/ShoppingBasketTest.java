@@ -1,6 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
-import sample.ShoppingBasket;
+import SB.ShoppingBasket;
 
 import java.io.File;
 

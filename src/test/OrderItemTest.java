@@ -1,6 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
-import sample.OrderItem;
+import SB.OrderItem;
 
 import static org.junit.Assert.*;
 

@@ -41,7 +41,7 @@ public class Controller implements Initializable{
 
     @FXML
     public void remove()throws Exception{
-        sb.removeProduct(nameInput.getText());
+        sb.removeProduct(nameInput.getText(), quantityInput.getValue());
         mainArea.setText(sb.toString());
     }
 
